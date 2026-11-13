@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | IIUC Cycle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-body">
+    <aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">↗</span><span>IIUC<span
+                    class="brand-light">CYCLE</span><small>Student portal</small></span></a>
+        <div class="side-label">MENU</div><a class="side-link selected" href="dashboard.html">▦ &nbsp; Overview</a><a
+            class="side-link" href="#rent">＋ &nbsp; Rent a bicycle</a><a class="side-link" href="#history">◷ &nbsp;
+            Rental history</a>
+        <div class="side-bottom">
+            <div class="profile-mini"><span class="profile-avatar">S</span>
+                <div><b>Student User</b><small>IIUC Student</small></div>
+            </div><a class="side-link" href="index.html">↪ &nbsp; Back to website</a>
+        </div>
+    </aside>
+    <main class="dash-main">
+        <header class="dash-top">
+            <div><span class="eyebrow">STUDENT DASHBOARD</span>
+                <h1>Good day, <em>Student!</em></h1>
+                <p>Here's what's happening with your campus rides.</p>
+            </div>
+            <div class="profile-chip"><span class="profile-avatar">S</span><span><b>Student User</b><small>Sample
+                        account</small></span></div>
+        </header>
+        <div class="dash-stats">
+            <div class="dash-stat"><small>AVAILABLE BICYCLES</small><strong>12</strong><span>Ready for a ride</span>
+            </div>
+            <div class="dash-stat"><small>YOUR TOTAL RIDES</small><strong>08</strong><span>Across campus</span></div>
+            <div class="dash-stat"><small>CURRENT STATUS</small><strong class="status-green">Not riding</strong><span>No
+                    active rental</span></div>
+        </div>
+        <section class="dash-panel" id="rent">
+            <div class="panel-head">
+                <div><span class="eyebrow">START A JOURNEY</span>
+                    <h2>Rent a bicycle</h2>
+                    <p>Enter the unique code displayed on an available bicycle.</p>
+                </div><span class="available-tag"><i></i> 12 available</span>
+            </div>
+            <form id="rent-form" class="rent-form"><label for="bike-code">BICYCLE IDENTIFICATION CODE</label>
+                <div class="rent-input"><input id="bike-code" placeholder="e.g. IIUC-BIKE-001" required><button
+                        class="btn" type="submit">Start rental ↗</button></div><small class="hint">This is a frontend
+                    demonstration. No real rental will be created.</small>
+            </form>
+            <div class="active-ride" id="active-ride">
+                <div><span class="eyebrow">ACTIVE RENTAL PREVIEW</span>
+                    <h3>You're on a ride!</h3>
+                    <p id="active-code">Bicycle code: —</p>
+                </div>
+                <div class="timer" id="timer">00:00:00</div><button class="btn btn-outline" id="return-bike">Return
+                    bicycle</button>
+            </div>
+        </section>
+        <section class="dash-panel" id="history">
+            <div class="panel-head">
+                <div><span class="eyebrow">YOUR ACTIVITY</span>
+                    <h2>Recent rental history</h2>
+                </div><span class="muted">Sample records</span>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>BICYCLE CODE</th>
+                            <th>DATE</th>
+                            <th>DURATION</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>IIUC-BIKE-004</td>
+                            <td>12 Nov 2026</td>
+                            <td>25 min</td>
+                            <td><span class="table-status">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>IIUC-BIKE-009</td>
+                            <td>10 Nov 2026</td>
+                            <td>18 min</td>
+                            <td><span class="table-status">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>IIUC-BIKE-002</td>
+                            <td>08 Nov 2026</td>
+                            <td>32 min</td>
+                            <td><span class="table-status">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

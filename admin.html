@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | IIUC Cycle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-body">
+    <aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">↗</span><span>IIUC<span
+                    class="brand-light">CYCLE</span><small>Admin console</small></span></a>
+        <div class="side-label">MANAGEMENT</div><a class="side-link selected" href="admin.html">▦ &nbsp; Overview</a><a
+            class="side-link" href="#bicycles">🚲 &nbsp; Bicycles</a><a class="side-link" href="#records">◷ &nbsp;
+            Rental records</a>
+        <div class="side-bottom">
+            <div class="profile-mini"><span class="profile-avatar">A</span>
+                <div><b>Administrator</b><small>Demo account</small></div>
+            </div><a class="side-link" href="index.html">↪ &nbsp; Back to website</a>
+        </div>
+    </aside>
+    <main class="dash-main">
+        <header class="dash-top">
+            <div><span class="eyebrow">ADMINISTRATION</span>
+                <h1>Campus <em>overview.</em></h1>
+                <p>Manage bicycles and review campus rental activity.</p>
+            </div>
+            <div class="profile-chip"><span class="profile-avatar">A</span><span><b>Administrator</b><small>Admin
+                        panel</small></span></div>
+        </header>
+        <div class="dash-stats">
+            <div class="dash-stat"><small>TOTAL BICYCLES</small><strong>20</strong><span>Registered in system</span>
+            </div>
+            <div class="dash-stat"><small>AVAILABLE</small><strong>12</strong><span>Ready to rent</span></div>
+            <div class="dash-stat"><small>CURRENTLY RENTED</small><strong>08</strong><span>Active rental records</span>
+            </div>
+            <div class="dash-stat"><small>TOTAL RENTALS</small><strong>146</strong><span>Sample total records</span>
+            </div>
+        </div>
+        <section class="dash-panel" id="bicycles">
+            <div class="panel-head">
+                <div><span class="eyebrow">FLEET MANAGEMENT</span>
+                    <h2>Bicycle inventory</h2>
+                    <p>Review and manage registered bicycles.</p>
+                </div><button class="btn" id="add-bike">＋ Add bicycle</button>
+            </div>
+            <div class="table-wrap">
+                <table id="bike-table">
+                    <thead>
+                        <tr>
+                            <th>BICYCLE CODE</th>
+                            <th>TYPE</th>
+                            <th>STATUS</th>
+                            <th>LOCATION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>IIUC-BIKE-001</td>
+                            <td>Standard</td>
+                            <td><span class="table-status">Available</span></td>
+                            <td>Main campus</td>
+                        </tr>
+                        <tr>
+                            <td>IIUC-BIKE-002</td>
+                            <td>Standard</td>
+                            <td><span class="table-status rented">Rented</span></td>
+                            <td>Main campus</td>
+                        </tr>
+                        <tr>
+                            <td>IIUC-BIKE-003</td>
+                            <td>Standard</td>
+                            <td><span class="table-status">Available</span></td>
+                            <td>Main campus</td>
+                        </tr>
+                        <tr>
+                            <td>IIUC-BIKE-004</td>
+                            <td>Standard</td>
+                            <td><span class="table-status">Available</span></td>
+                            <td>Main campus</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="dash-panel" id="records">
+            <div class="panel-head">
+                <div><span class="eyebrow">RENTAL ACTIVITY</span>
+                    <h2>Recent rental records</h2>
+                </div><span class="muted">Sample records</span>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STUDENT ID</th>
+                            <th>BICYCLE CODE</th>
+                            <th>PICKUP</th>
+                            <th>RETURN</th>
+                            <th>PAYMENT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> CSE-220101</td>
+                            <td>IIUC-BIKE-002</td>
+                            <td>10:15 AM</td>
+                            <td>—</td>
+                            <td><span class="table-status rented">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>EEE-220045</td>
+                            <td>IIUC-BIKE-004</td>
+                            <td>09:20 AM</td>
+                            <td>09:45 AM</td>
+                            <td><span class="table-status">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td>BBA-220032</td>
+                            <td>IIUC-BIKE-009</td>
+                            <td>08:40 AM</td>
+                            <td>08:58 AM</td>
+                            <td><span class="table-status">Paid</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
